@@ -1,26 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
+int find(listint_t *head, int node_ptr)
+{
+	listint_t *temp = head;
+
+	while(temp)
+	{
+		temp = temp->next;
+	}
+}
 /**
- * check_cycle - function checks if a singly linked list has a cycle in it.
- * @list: pointer to the beginning of the node
- * Return: 0 if no cycle, 1 if there is a cycle
+ * check_cycle - check if a lincked list contains a cycle.
+ * @list: The linked list to check.
+ * Return: 1 if the list contains a cycle. 0 otherwise.
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *current, *check;
-
-	if (list == NULL || list->next == NULL)
-		return (0);
-	current = list;
-	check = current->next;
-
-	while (current != NULL && check->next != NULL
-		&& check->next->next != NULL)
+	int cycle_found = 0;
+	listint_t *previous_nodes, *temp;
+	temp = list;
+	while(temp && !cycle_found)
 	{
-		if (current == check)
-			return (1);
-		current = current->next;
-		check = check->next->next;
+		temp = temp->next;
+		cycle_found = find(list, temp);
 	}
-	return (0);
+	return cycle_found;
 }
