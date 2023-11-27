@@ -1,3 +1,1 @@
-Sprint 2
-Python
-Java Script
+Sprint 2: High Level Langauge
