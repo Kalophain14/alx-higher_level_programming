@@ -1,3 +1,1 @@
-Sprint 2
-Python
-Java Script
+A first look on python and shell scripting within python
