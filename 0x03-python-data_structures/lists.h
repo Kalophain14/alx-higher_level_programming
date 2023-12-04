@@ -9,6 +9,7 @@
  * Description: singly linked list node structure
  * for project
  */
+
 typedef struct listint_s
 {
     int n;
@@ -21,4 +22,4 @@ void free_listint(listint_t *head);
 
 int is_palindrome(listint_t **head);
 
-#endif /* LISTS_H */
+#endif
