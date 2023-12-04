@@ -2,8 +2,8 @@
 #include "lists.h"
 
 /**
- * list_len - computes the length of the liked list..
- * @h: a pointer to the list to iterato to.
+ * list_len - computes the length of the linked list.
+ * @h: a pointer to the list to iterate through.
  * Return: the number of nodes
  */
 size_t list_len(const listint_t *h)
@@ -23,12 +23,12 @@ size_t list_len(const listint_t *h)
 }
 
 /**
- * _chunk_ispal - Tests if a part of a list is palindrome.
+ * _chunk_ispal - Tests if a part of a list is a palindrome.
  * @l: The list
  * @start: The start
  * @end: The end
- * Return: 1 if the substring s[start..end] is palindrome.
- *	   0 otherwise.
+ * Return: 1 if the substring s[start..end] is a palindrome.
+ *         0 otherwise.
  */
 int _chunk_ispal(listint_t **l, int start, int end)
 {
@@ -65,6 +65,5 @@ int is_palindrome(listint_t **head)
 		res = _chunk_ispal(array_of_list, 0, n - 1);
 		free(array_of_list);
 	}
-		return (res);
+	return (res);
 }
-
