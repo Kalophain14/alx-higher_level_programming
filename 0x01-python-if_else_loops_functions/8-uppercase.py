@@ -6,3 +6,5 @@ def uppercase(str):
         print("{:s}".format(ch), end='')
 
     print('\n', end="")
+
+s
